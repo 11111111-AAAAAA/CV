@@ -1,39 +1,131 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人简历</title>
+    <title>Lab of Mesoscopic Physics and Quantum Devices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 这里是 CSS，负责美化界面 */
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #003366; color: white; padding: 2rem; text-align: center; }
-        .container { width: 80%; margin: auto; overflow: hidden; background: white; padding: 20px; margin-top: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 10px; }
-        .footer { text-align: center; padding: 20px; color: #666; font-size: 0.8rem; }
+        /* 自定义“南大蓝”颜色 */
+        :root { --nju-blue: #004098; }
+        
+        body { font-family: "Segoe UI", Arial, sans-serif; color: #333; }
+        
+        /* 导航栏样式 */
+        .navbar { background-color: white; border-bottom: 3px solid var(--nju-blue); }
+        .nav-link { color: #333 !important; font-weight: 500; margin-right: 15px; }
+        .nav-link:hover { color: var(--nju-blue) !important; }
+
+        /* 巨幕大图区域 */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1532187875605-2fe358511423?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* 标题装饰 */
+        .section-title {
+            color: var(--nju-blue);
+            border-left: 5px solid var(--nju-blue);
+            padding-left: 15px;
+            margin: 40px 0 25px 0;
+            font-weight: bold;
+        }
+
+        /* 研究方向卡片样式 */
+        .research-card {
+            border: none;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .research-card:hover { transform: translateY(-5px); }
+        .card-img-top { height: 180px; object-fit: cover; border-radius: 5px; }
+        
+        .footer { background: #222; color: #ccc; padding: 40px 0; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>张三的个人主页</h1>
-        <p>未来科学家 / 网页开发者</p>
-    </header>
 
-    <div class="container">
-        <h2>关于我</h2>
-        <p>你好！我是一名正在学习网页设计的初学者。我拥有一台笔记本电脑和探索世界的热情。</p>
-        
-        <h2>教育背景</h2>
-        <ul>
-            <li><strong>南京大学</strong> - 物理学学士 (2022-2026)</li>
-        </ul>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--nju-blue); font-weight: bold; font-size: 1.5rem;">NJU NANO-LAB</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Papers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color:var(--nju-blue) !important;">中 文</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <h2>研究兴趣</h2>
-        <p>纳米材料、量子器件、人工智能应用。</p>
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Lab of Mesoscopic Physics and Quantum Devices</h1>
+            <p class="lead">Exploring the fundamental electronic properties of 2D materials.</p>
+        </div>
     </div>
 
-    <div class="footer">
-        © 2026 由张三手工打造
+    <div class="container my-5">
+        <h3 class="section-title">Research Directions</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Quantum Materials</h6>
+                        <p class="small text-muted">Synthesis & Investigation of high-quality two-dimensional quantum materials.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Quantum Simulation</h6>
+                        <p class="small text-muted">Quantum state manipulation and simulation in heterostructures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Electronic Devices</h6>
+                        <p class="small text-muted">Design and fabrication of new-principle information devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Neuromorphic Computing</h6>
+                        <p class="small text-muted">Achieving low-power, high-intelligence neuromorphic systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Tang Zhongying Building, Nanjing University, Gulou District, Nanjing, Jiangsu Province</p>
+            <p>All Rights Reserved © 2015-2026 Nanjing University Miao Feng's Research Group</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
