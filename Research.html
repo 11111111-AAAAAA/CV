@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab of Mesoscopic Physics and Quantum Devices</title>
+    <title>THU Tian He LAB</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* 自定义“南大蓝”颜色 */
@@ -48,6 +48,26 @@
         .card-img-top { height: 180px; object-fit: cover; border-radius: 5px; }
         
         .footer { background: #222; color: #ccc; padding: 40px 0; font-size: 0.9rem; }
+
+        /* 新闻日期方块的悬停效果 */
+        .date-box {
+            transition: background-color 0.3s;
+        }
+
+        .news-list .row:hover .date-box {
+            background-color: #002d6a !important; /* 鼠标悬停时稍微变深 */
+        }
+
+        .news-list h5 a:hover {
+            color: var(--nju-blue) !important;
+        }
+
+        /* 响应式调整：手机端让日期和文字不要太挤 */
+        @media (max-width: 576px) {
+            .date-box { min-width: 60px; padding: 5px !important; }
+            .day { font-size: 1.2rem !important; }
+        }
+
     </style>
 </head>
 <body>
@@ -123,14 +143,15 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <p>Tang Zhongying Building, Nanjing University, Gulou District, Nanjing, Jiangsu Province</p>
-            <p>All Rights Reserved © 2015-2026 Nanjing University Miao Feng's Research Group</p>
+            <p>THU Tian He Building, Tsinghua University, Haidian District, Beijing</p>
+            <p>All Rights Reserved © 2015-2026 Tsinghua University Tian He's Research Group</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
