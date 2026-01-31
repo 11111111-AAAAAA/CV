@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THU Tian He LAB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 自定义“南大蓝”颜色 */
+        :root { --nju-blue: #004098; }
+        
+        body { font-family: "Segoe UI", Arial, sans-serif; color: #333; }
+        
+        /* 导航栏样式 */
+        .navbar { background-color: white; border-bottom: 3px solid var(--nju-blue); }
+        .nav-link { color: #333 !important; font-weight: 500; margin-right: 15px; }
+        .nav-link:hover { color: var(--nju-blue) !important; }
+
+        /* 轮播图幻灯片高度和背景设置 */
+        .hero-slide {
+            height: 450px; /* 你可以根据需要调整高度 */
+            background-size: cover;
+            background-position: center;
+            transition: transform 2s ease; /* 增加一点平滑感 */
+        }
+
+        /* 让图片切换时有淡入淡出的高级感 */
+        .carousel-fade .carousel-item {
+            transition-property: opacity;
+        }
+
+        /* 标题装饰 */
+        .section-title {
+            color: var(--nju-blue);
+            border-left: 5px solid var(--nju-blue);
+            padding-left: 15px;
+            margin: 40px 0 25px 0;
+            font-weight: bold;
+        }
+
+        /* 研究方向卡片样式 */
+        .research-card {
+            border: none;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .research-card:hover { transform: translateY(-5px); }
+        .card-img-top { height: 180px; object-fit: cover; border-radius: 5px; }
+        
+        .footer { background: #222; color: #ccc; padding: 40px 0; font-size: 0.9rem; }
+
+        /* 新闻日期方块的悬停效果 */
+        .date-box {
+            transition: background-color 0.3s;
+        }
+
+        .news-list .row:hover .date-box {
+            background-color: #002d6a !important; /* 鼠标悬停时稍微变深 */
+        }
+
+        .news-list h5 a:hover {
+            color: var(--nju-blue) !important;
+        }
+
+        /* 响应式调整：手机端让日期和文字不要太挤 */
+        @media (max-width: 576px) {
+            .date-box { min-width: 60px; padding: 5px !important; }
+            .day { font-size: 1.2rem !important; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <!--
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--nju-blue); font-weight: bold; font-size: 1.5rem;">THU Tian He LAB</span>
+            </a>
+            -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/Tsinghua_University-Logo.png" alt="Logo" height="40" class="d-inline-block align-text-top me-2">
+                <div class="d-inline-block">
+                    <span style="color: var(--nju-blue); font-weight: bold; font-size: 1.2rem; display: block; line-height: 1;">THU Tian He LAB</span>
+                    <span style="font-size: 0.7rem; color: #666;">Lab of THU Tian He</span>
+                </div>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="News.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Papers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color:var(--nju-blue) !important;">中 文</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h3 class="section-title">Research Directions</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="images/2.1.jpg?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Quantum Materials</h6>
+                        <p class="small text-muted">Synthesis & Investigation of high-quality two-dimensional quantum materials.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="images/2.2.jpg?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Quantum Simulation</h6>
+                        <p class="small text-muted">Quantum state manipulation and simulation in heterostructures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="images/2.3.jpg?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Electronic Devices</h6>
+                        <p class="small text-muted">Design and fabrication of new-principle information devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card research-card">
+                    <img src="images/2.4.jpg?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="fw-bold">Neuromorphic Computing</h6>
+                        <p class="small text-muted">Achieving low-power, high-intelligence neuromorphic systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>THU Tian He Building, Tsinghua University, Haidian District, Beijing</p>
+            <p>All Rights Reserved © 2015-2026 Tsinghua University Tian He's Research Group</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
